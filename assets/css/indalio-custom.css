@@ -182,10 +182,84 @@
     #indalio-artistic-section .tp-cta-title {
         font-size: 50px;
     }
-    .floating-art {
-        display: none; /* Hide large image on mobile */
+  .floating-art {
+      display: none; /* Hide large image on mobile */
     }
     .art-desc {
         font-size: 16px;
     }
+}
+
+/* Hero background blur with image */
+.tp-hero-3-area {
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.tp-hero-3-area::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../img/inner-about/hero/hero-1.jpg") center center / cover no-repeat;
+    filter: blur(8px);
+    transform: scale(1.02);
+    opacity: 1;
+    z-index: 0;
+}
+
+.tp-hero-3-circle-shape,
+.tp-hero-3-content-box {
+    position: relative;
+    z-index: 1;
+}
+
+/* Remove extra spacing so hero sits tight under header */
+.tp-hero-3-ptb {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Hero mount adjustments */
+#react-hero-root.tp-hero-3-area {
+    background: #ffffff;
+    padding-top: 0;
+    margin-top: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#react-hero-root::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("assets/img/inner-about/hero/hero-1.jpg") center center / cover no-repeat;
+    filter: blur(0px);
+    transform: scale(1.02);
+    opacity: 1;
+    z-index: 0;
+}
+
+.tp-hero-3-content-box,
+.tp-hero-3-circle-shape {
+    position: relative;
+    z-index: 1;
+}
+
+/* Remove hero gradient blob */
+.tp-hero-3-circle-shape span {
+    display: none !important;
+    background: none !important;
+}
+
+.tp-hero-3-ptb {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.tp-gallery-area {
+    background: #ffffff;
 }
