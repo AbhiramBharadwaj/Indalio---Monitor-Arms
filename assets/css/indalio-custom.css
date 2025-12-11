@@ -11,6 +11,30 @@
     align-items: center;
 }
 
+/* Keep the header anchored and consistent on scroll */
+.tp-header-3-area {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #ffffff;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+    margin-top: 0 !important;
+    padding: 12px 0;
+}
+
+.tp-header-3-area.header-sticky {
+    background: #ffffff !important;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+.tp-header-3-area.header-sticky .tp-header-3-logo {
+    display: block !important;
+}
+
+.tp-header-3-area.header-sticky .tp-header-3-right {
+    display: flex !important;
+}
+
 .indalio-hero-grid {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
