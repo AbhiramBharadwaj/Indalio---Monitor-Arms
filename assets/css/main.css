@@ -10831,7 +10831,7 @@ body.tp-magic-cursor #magic-cursor {
 /*----------------------------------------*/
 .tp-footer-3-logo img {
   height: 100%;
-  width: 85px;
+  width: 140px;
 }
 .tp-footer-3-title {
   font-size: 30px;
@@ -10843,12 +10843,11 @@ body.tp-magic-cursor #magic-cursor {
   margin-bottom: 30px;
 }
 .tp-footer-3-menu ul {
-  display: inline-block;
+  display: block;
 }
 .tp-footer-3-menu ul li {
   list-style-type: none;
-  width: 50%;
-  float: left;
+  width: 100%;
   margin-bottom: 10px;
 }
 .tp-footer-3-menu ul li a {
@@ -10916,7 +10915,7 @@ body.tp-magic-cursor #magic-cursor {
   color: var(--tp-common-white);
 }
 .tp-footer-3-logo {
-  margin-bottom: 105px;
+  margin-bottom: 60px;
   display: inline-block;
 }
 .tp-footer-3-bg-text {
@@ -10929,6 +10928,7 @@ body.tp-magic-cursor #magic-cursor {
   font-weight: 500;
   line-height: 26px;
   color: rgba(255, 255, 255, 0.8);
+  text-align: left;
 }
 .tp-footer-3-copyright {
   font-size: 18px;
