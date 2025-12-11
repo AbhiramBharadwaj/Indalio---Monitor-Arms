@@ -11737,7 +11737,7 @@ body.tp-magic-cursor #magic-cursor {
   font-weight: 400;
   line-height: 1;
   letter-spacing: -5.6px;
-  color: var(--tp-common-black);
+  color: #162233;
   font-family: var(--tp-ff-marcellus);
   margin-bottom: 35px;
 }
@@ -11762,7 +11762,7 @@ body.tp-magic-cursor #magic-cursor {
   line-height: 1;
   display: block;
   text-transform: uppercase;
-  color: var(--tp-common-black);
+  color: #162233;
   font-family: var(--tp-ff-marcellus);
   margin-bottom: 20px;
 }

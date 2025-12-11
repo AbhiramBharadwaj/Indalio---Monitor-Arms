@@ -1828,6 +1828,98 @@
 
 	}
 
+	// About us icon bounce (hero-style): entry pop + gentle float
+	if ($('.tp-about-bounce').length > 0) {
+		gsap.utils.toArray('.tp-about-bounce').forEach((item) => {
+			let floatTween;
+
+			ScrollTrigger.create({
+				trigger: item,
+				start: "top 85%",
+				onEnter: () => {
+					gsap.fromTo(item,
+						{ y: -80, opacity: 0 },
+						{
+							y: 0,
+							opacity: 1,
+							duration: 1.1,
+							ease: "bounce.out",
+							onComplete: () => {
+								floatTween = gsap.to(item, {
+									y: "+=12",
+									duration: 1.8,
+									ease: "sine.inOut",
+									repeat: -1,
+									yoyo: true
+								});
+							}
+						});
+				},
+				onLeave: () => floatTween && floatTween.pause(),
+				onEnterBack: () => {
+					gsap.fromTo(item,
+						{ y: -20, opacity: 1 },
+						{
+							y: 0,
+							duration: 0.8,
+							ease: "bounce.out",
+							onComplete: () => floatTween && floatTween.play()
+						});
+				},
+				onLeaveBack: () => floatTween && floatTween.pause()
+			});
+		});
+	}
+
+	// About title bounce-in for extra energy
+	if ($('.tp-about-title-bounce').length > 0) {
+		gsap.utils.toArray('.tp-about-title-bounce').forEach((title) => {
+			gsap.set(title, { opacity: 1 });
+			gsap.from(title, {
+				y: 20,
+				opacity: 0,
+				duration: 0.9,
+				ease: "bounce.out",
+				onComplete: () => {
+					gsap.to(title, {
+						y: -6,
+						duration: 1.4,
+						ease: "sine.inOut",
+						yoyo: true,
+						repeat: -1
+					});
+				}
+			});
+		});
+	}
+
+	// About hero block subtle rise + glow
+	if ($('.tp-about-hero-block').length > 0) {
+		gsap.from('.tp-about-hero-inner', {
+			scrollTrigger: {
+				trigger: '.tp-about-hero-block',
+				start: "top 85%",
+				toggleActions: "play none none none",
+			},
+			y: 40,
+			opacity: 0,
+			duration: 1,
+			ease: "power2.out"
+		});
+
+		gsap.from('.tp-about-hero-bg', {
+			scrollTrigger: {
+				trigger: '.tp-about-hero-block',
+				start: "top 90%",
+				toggleActions: "play none none none",
+			},
+			scale: 1.08,
+			opacity: 0.5,
+			duration: 1.6,
+			ease: "power2.out"
+		});
+	}
+
 	if ($('.tp-hero-2-area').length > 0) {
 
 		gsap.set(".tp-hero-2-title.text-1", { x: 300, });
@@ -2400,10 +2492,13 @@
 		let menuBox = $('.tp-header-3-menu-box')
 		let menuBoxWidth = menuBox.width()
 		let menuBoxHeight = menuBox.height()
+		let headerOffset = $('.tp-header-3-area').offset()
+		let headerTop = headerOffset ? headerOffset.top : 0
 		$('.menu-bg').css({
 			'width': menuBoxWidth + 46,
 			'height': menuBoxHeight,
-			'left': menuBox.offset().left
+			'left': menuBox.offset().left,
+			'top': menuBox.offset().top - headerTop
 		})
 	}
 
