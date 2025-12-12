@@ -35,6 +35,20 @@
     display: flex !important;
 }
 
+.tp-header-3-right .contact-btn {
+    margin-left: 12px;
+    padding: 8px 16px;
+    border-radius: 12px;
+    background: #0f172a;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+}
+.tp-header-3-right .contact-btn:hover {
+    background: #182842;
+}
+
 /* About story layout */
 .ab-about-story.story-card {
     background: #ffffff;
@@ -150,6 +164,33 @@
 }
 .sv-small-text-box span {
     letter-spacing: 0.02em;
+}
+
+/* Minimal dropdown styling */
+.tp-header-3-menu .tp-submenu.submenu {
+    background: #2d2d2d;
+    border-radius: 10px;
+    padding: 10px 0;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    min-width: 180px;
+}
+.tp-header-3-menu .tp-submenu.submenu ul {
+    display: block;
+    margin: 0;
+}
+.tp-header-3-menu .tp-submenu.submenu ul li {
+    list-style: none;
+}
+.tp-header-3-menu .tp-submenu.submenu ul li a {
+    display: block;
+    padding: 10px 16px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
+}
+.tp-header-3-menu .tp-submenu.submenu ul li a:hover {
+    background: rgba(255,255,255,0.08);
 }
 
 .indalio-hero-grid {
