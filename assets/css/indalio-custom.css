@@ -136,6 +136,22 @@
     }
 }
 
+/* FAQ CTA sizing */
+.sv-big-text {
+    font-size: clamp(64px, 10vw, 120px);
+    letter-spacing: -4px;
+    white-space: normal;
+    transform: none;
+    text-align: center;
+}
+.sv-big-text-box {
+    display: flex;
+    justify-content: center;
+}
+.sv-small-text-box span {
+    letter-spacing: 0.02em;
+}
+
 .indalio-hero-grid {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
